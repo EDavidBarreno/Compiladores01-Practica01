@@ -1,0 +1,1 @@
+SELECCIONAR columna1,columna2 EN proyecto.archivo1 FILTRAR columna1=”valor”;

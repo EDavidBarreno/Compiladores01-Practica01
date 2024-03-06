@@ -1,0 +1,24 @@
+package org.zafkiel.backend;
+
+import java_cup.runtime.Symbol;
+
+parser code
+{:
+    private Symbol s;
+
+    public void syntax_error(Symbol s){
+        this.s = s;
+    }
+
+    public Symbol getS(){
+        return this.s;
+}
+:};
+
+terminal SELECCIONAR, FILTRAR, INSERTAR, ACTUALIZAR, ASIGNAR, ELIMINAR, Identificador;
+non terminal CONSULTA, ;
+
+start with CONSULTA;
+
+CONSULTA ::= SELECCIONAR identificador;
+
